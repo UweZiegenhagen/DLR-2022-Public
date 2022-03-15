@@ -40,12 +40,21 @@
 
 \newcommand{\tier}[1]{\textcolor{magenta}{\textsc{\textbf{#1}}}}
 
+\newcommand{\latexbefehl}[1]{\textcolor{blue}{\ttfamily\textbackslash #1}}
+
+\newcommand{\zweiparams}[2]{\textcolor{#1}{\ttfamily\textbackslash #2}}
+
 \begin{document} 
 \maketitle
 
 \tableofcontents
 
 \chapter{Einführung}
+
+\latexbefehl{documentclass}
+
+\zweiparams{green}{documentclass}
+
 
 \textcolor{red}{\textbf{Uwe Ziegenhagen}}
 
@@ -104,6 +113,29 @@
 \item[Pfirsich] noch eine weitere Frucht
 \end{compactdesc}
 
+\section{Schriftgrößen}
+
+{\tiny Uwe}
+
+{\scriptsize Uwe} 
+
+{\footnotesize Uwe} 
+
+{\small Uwe} 
+
+{\normalsize Uwe} 
+
+{\large Uwe} 
+
+{\Large Uwe} 
+
+{\LARGE Uwe} 
+
+{\huge Uwe} 
+
+{\Huge Uwe} 
+
+\texttt{dir /?} \textsf{\bfseries Ein Text ohne Serifen}
 
 \section{Literaturüberblick}
 
