@@ -1,4 +1,5 @@
 \documentclass[ngerman,12pt,parskip=half]{scrreprt} 
+% draft als Option verhindert das Einbetten von Bildern, geht dann schneller
 
 \usepackage[T1]{fontenc}
 \usepackage{babel}
@@ -47,10 +48,18 @@
 
 \newcommand{\zweiparams}[2]{\textcolor{#1}{\ttfamily\textbackslash #2}}
 
+\newcommand{\redfootnote}[1]{\footnote{\textcolor{red}{#1}}
+}
+
+
 \begin{document} 
 \maketitle
 
 \tableofcontents
+
+\listoffigures
+
+\listoftables
 
 \chapter{Einführung}
 
@@ -58,6 +67,7 @@
 
 \zweiparams{green}{documentclass}
 
+Siehe Abbildung \ref{fig:katze} auf Seite \pageref{fig:katze}, die sich in Kapitel \ref{ch:fazit} befindet.
 
 \textcolor{red}{\textbf{Uwe Ziegenhagen}}
 
@@ -69,7 +79,7 @@
 
 Sie sagte: \enquote{Hallo, ich \enquote{Hallo, ich lerne LaTeX} lerne LaTeX}
 
-\blindtext\footnote{\blindtext[2]}
+\blindtext\footnote{\textcolor{red}{\blindtext[2]}}
 
 
 \tier{Melly}
@@ -209,9 +219,68 @@ Sie sagte: \enquote{Hallo, ich \enquote{Hallo, ich lerne LaTeX} lerne LaTeX}
 
 \blindtext[5]
 
-\chapter{Fazit}
+\chapter{Fazit}\label{ch:fazit}
 
 \blindtext[25]
 
+\includegraphics[width=5cm]{Bilder/Katze.jpg}
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Bilder/Katze.jpg}
+\captionof{figure}{Meine Katze Melli}\label{fig:katze}
+\end{center}
+
+\clearpage % Seitenumbruch erzwingen
+
+\section{Tabellen}
+
+\begin{center}
+\captionof{table}{Meine unschöne Tabelle}\label{tab:erstetabelle}
+\begin{tabular}{|l|r|c|p{5cm}|} \hline
+123 & Hallo Welt & abc & Hallo, ich bin ein kleiner Absatz \\ \hline
+4545123 & Welt & abcdefg & Hallo, ich bin ein kleiner Absatz mit mehr Text \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\captionof{table}{Meine unschöne Tabelle}\label{tab:erstetabelle}
+\begin{tabular}{lrcp{5cm}} \\ \toprule[2pt]
+\textbf{Spalte 1} & \textbf{Spalte 2}  & \textbf{Spalte 3}  & \textbf{Spalte 4}  \\ \midrule[1pt]
+123 & Hallo Welt & abc & Hallo, ich bin ein kleiner Absatz \\ 
+4545123 & Welt & abcdefg & Hallo, ich bin ein kleiner Absatz mit mehr Text \\ \bottomrule[4pt]
+\end{tabular}
+\end{center}
+
+\chapter{Gleitobjekte}
+
+\blindtext[1]
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Bilder/Katze.jpg}
+\caption{Meine Katze Melli}\label{fig:katzegl}
+\end{center}
+\end{figure}
+
+\blindtext[5]
+
+\begin{table}[htbp]
+\begin{center}
+\caption{Meine unschöne Tabelle}\label{tab:erstetabelle}
+\begin{tabular}{lrcp{5cm}} \\ \toprule[2pt]
+\textbf{Spalte 1} & \textbf{Spalte 2}  & \textbf{Spalte 3}  & \textbf{Spalte 4}  \\ \midrule[1pt]
+123 & Hallo Welt & abc & Hallo, ich bin ein kleiner Absatz \\ 
+4545123 & Welt & abcdefg & Hallo, ich bin ein kleiner Absatz mit mehr Text \\ \bottomrule[1pt]
+\end{tabular}
+\end{center}
+\end{table}
+
+\blindtext[10]
+
 \end{document} 
+
+h = here
+t = top
+b = bottom
+p = ? (paragraph?)
 

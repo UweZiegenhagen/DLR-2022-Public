@@ -1,0 +1,45 @@
+\documentclass[12pt,ngerman,parskip=half]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{paralist}
+\usepackage{xcolor}
+\usepackage{blindtext}
+
+\begin{document}
+
+\blindtext
+
+Ich bin eine $a^2+b^2=c^2$ Formel im Fließtext. % TeX-Notation
+
+Ich bin eine abgesetzte $$a^2+b^2=c^2$$ Formel. % TeX-Notation
+
+Nehmt besser die \LaTeX-Notation!
+
+Ich bin eine \(a^2+b^2=c^2\) Formel im Fließtext. % LaTeX-Notation
+
+Ich bin eine abgesetzte \[a^2+b^2=c^2\] Formel. % LaTeX-Notation
+
+\begin{equation}
+- \frac{p}{2} \pm \sqrt{ \left(\frac{p}{2}\right)^2  -q  } \Rightarrow a^2 + b^2 = c^2
+\end{equation}
+
+\begin{equation}
+- \frac{p}{2} \pm \sqrt{ \left(\frac{p}{2}\right)^2  -q  } \Leftrightarrow a^2 + b^2 = \Omega
+\end{equation}
+
+\begin{equation}
+\sum_{i=1}^{\infty} x_{i_2} \times {x^2}^3
+\end{equation}
+
+Siehe Formel \ref{eq:eins}
+
+\begin{equation}
+\prod_{i=1}^{-\infty} x_{i_2} {x^2}^3 \cap \cup < 1 \geq 2 \not= 3 \leq 5 \label{eq:eins}
+\end{equation}
+
+\end{document}
