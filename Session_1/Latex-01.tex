@@ -1,13 +1,16 @@
 \documentclass[ngerman,12pt,parskip=half]{scrreprt} 
 
 \usepackage[T1]{fontenc}
+\usepackage{babel}
+
 \usepackage{xcolor}
 \usepackage{graphicx}
 
 \usepackage{booktabs}
 \usepackage{paralist}
+\usepackage{csquotes}
 
-\usepackage{babel}
+
 \usepackage{blindtext}
 
 \author{Uwe Ziegenhagen}
@@ -59,6 +62,15 @@
 \textcolor{red}{\textbf{Uwe Ziegenhagen}}
 
 \person{Uwe Ziegenhagen}
+
+\section{Fuß- und Randnoten}
+
+\blindtext\marginpar{Ich bin Text im Rand und sollte nicht zu lang sein}
+
+Sie sagte: \enquote{Hallo, ich \enquote{Hallo, ich lerne LaTeX} lerne LaTeX}
+
+\blindtext\footnote{\blindtext[2]}
+
 
 \tier{Melly}
 
