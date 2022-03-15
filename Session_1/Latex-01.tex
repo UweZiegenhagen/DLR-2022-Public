@@ -1,10 +1,44 @@
-\documentclass[ngerman,12pt]{scrreprt} 
+\documentclass[ngerman,12pt,parskip=half]{scrreprt} 
+
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\usepackage{booktabs}
+\usepackage{paralist}
 
 \usepackage{babel}
 \usepackage{blindtext}
 
 \author{Uwe Ziegenhagen}
 \title{Mein erstes \LaTeX-Dokument}
+
+\usepackage{hyperref} % Als letztes Paket laden
+
+\hypersetup{
+    bookmarks=true,                     % show bookmarks bar
+    unicode=false,                      % non - Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,                        % show Acrobat’s toolbar
+    pdfmenubar=true,                        % show Acrobat’s menu
+    pdffitwindow=false,                 % window fit to page when opened
+    pdfstartview={FitH},                    % fits the width of the page to the window
+    pdftitle={My title},                        % title
+    pdfauthor={Author},                 % author
+    pdfsubject={Subject},                   % subject of the document
+    pdfcreator={Creator},                   % creator of the document
+    pdfproducer={Producer},             % producer of the document
+    pdfkeywords={keyword1, key2, key3},   % list of keywords
+    pdfnewwindow=true,                  % links in new window
+    colorlinks=true,                        % false: boxed links; true: colored links
+    linkcolor=blue,                          % color of internal links
+    filecolor=blue,                     % color of file links
+    citecolor=blue,                     % color of file links
+    urlcolor=blue                        % color of external links
+}
+
+\newcommand{\person}[1]{\textcolor{red}{\textsc{\textbf{#1}}}}
+
+\newcommand{\tier}[1]{\textcolor{magenta}{\textsc{\textbf{#1}}}}
 
 \begin{document} 
 \maketitle
@@ -13,9 +47,67 @@
 
 \chapter{Einführung}
 
+\textcolor{red}{\textbf{Uwe Ziegenhagen}}
+
+\person{Uwe Ziegenhagen}
+
+\tier{Melly}
+
+\begin{itemize}[\(\Rightarrow\)]
+\item Hallo
+\item ich bin ein Item
+\item auf der Item Liste
+\end{itemize}
+
+\begin{compactitem}[\(\Rightarrow\)]
+\item Hallo
+\item ich bin ein Item
+\item auf der Item Liste
+\end{compactitem}
+
+
+\begin{enumerate}[i]
+\item Hallo
+\item ich bin ein Item
+\item auf der Enumerate Liste
+\end{enumerate}
+
+\begin{compactenum}[i]
+\item Hallo
+\item ich bin ein Item
+\item auf der Enumerate Liste
+\end{compactenum}
+
+
+\begin{itemize}
+\item Hallo
+\item ich bin ein Item
+\begin{enumerate}
+\item Hallo
+\item ich bin ein Item
+\item auf der Enumerate Liste
+\end{enumerate}
+
+\item auf der Item Liste
+\end{itemize}
+
+
+\begin{description}
+\item[Apfel] eine Frucht
+\item[Birne] auch eine Frucht
+\item[Pfirsich] noch eine weitere Frucht
+\end{description}
+
+\begin{compactdesc}
+\item[Apfel] eine Frucht
+\item[Birne] auch eine Frucht
+\item[Pfirsich] noch eine weitere Frucht
+\end{compactdesc}
+
+
 \section{Literaturüberblick}
 
-\blindtext[5]
+\blindtext[15]
 
 \subsection[Literatur im deutschsprachigen Raum]{Literatur im deutschsprachigen Raum in der Zeit von Bismarck bis Grotewohl 1871--1960}
 
