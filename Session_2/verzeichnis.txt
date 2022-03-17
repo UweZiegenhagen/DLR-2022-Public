@@ -1,0 +1,17 @@
+arara.log
+
+Basisdokument.aux
+
+Basisdokument.lof
+
+Basisdokument.log
+
+Basisdokument.pdf
+
+Basisdokument.synctex.gz
+
+Basisdokument.tex
+
+Basisdokument.toc
+
+BasisMathe.aux
