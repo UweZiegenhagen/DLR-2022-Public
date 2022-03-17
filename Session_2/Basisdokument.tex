@@ -3,8 +3,13 @@
 % arara: pdflatex: {shell: yes}
 \documentclass[12pt,ngerman,parskip=half]{scrreprt}
 
+% Siehe https://www.uweziegenhagen.de/?p=2928 
+% für Hinweise zur Installation
+% erfordert Java Runtime
+
 \usepackage{babel}
 \usepackage{blindtext}
+\usepackage{graphicx}
 
 \author{Uwe Ziegenhagen}
 \title{Mein Basisdokument}
@@ -14,7 +19,7 @@
 
 \tableofcontents
 
-Hallo DLR!
+\listoffigures
 
 \chapter{Einleitung}
 
@@ -26,6 +31,10 @@ Hallo DLR!
 
 \chapter{Fazit}
 
-\chapter{sdgdfagdsf}
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{./Bilder/Katze1.jpg}
+\caption{Meine Katze}
+\end{figure}
+
 
 \end{document}
