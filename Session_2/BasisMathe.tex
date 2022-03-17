@@ -35,9 +35,14 @@
     urlcolor=blue                        % color of external links
 }
 
+\newcommand{\klammer}[1]{\left(#1\right)}
+
 \begin{document}
 
 Hallo, ich $a^2+b^2=c^2$ bin eine Formel im Fließtext, in \TeX-Notation.
+
+\[ \klammer{ 123 }\]
+
 
 Hallo, ich \(a^2+b^2=c^2\) bin eine Formel im Fließtext, in \LaTeX-Notation.
 
@@ -202,6 +207,13 @@ a &= c \cdot \tanh z + \alpha\omega &= \sum_{i=1}^{1000} t
 \[ a \in N \forall  \]
 
 \(  \mathbb{N} \)
+
+
+\begin{align}
+a &= 100 \quad \text{für x größer 100} \\
+a &= 100 
+\end{align}
+
 
 \end{document}
 
