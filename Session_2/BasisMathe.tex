@@ -1,0 +1,207 @@
+\documentclass[12pt,ngerman,parskip=half]{scrartcl}
+\usepackage{babel}
+\usepackage{blindtext}
+\usepackage{amsmath, amsfonts}
+\usepackage{microtype}
+\usepackage{esvect}
+
+\makeatletter % Mach das @ zu einem normal Zeichen
+\newcommand{\avg}{\mathop{\operator@font avg}}
+\makeatother
+
+\author{Uwe Ziegenhagen}
+\title{Mein zweites \LaTeX-Dokument}
+\date{Köln, den \today}
+
+\usepackage{hyperref}
+\hypersetup{
+    bookmarks=true,                     % show bookmarks bar
+    unicode=false,                      % non - Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,                        % show Acrobat’s toolbar
+    pdfmenubar=true,                        % show Acrobat’s menu
+    pdffitwindow=false,                 % window fit to page when opened
+    pdfstartview={FitH},                    % fits the width of the page to the window
+    pdftitle={My title},                        % title
+    pdfauthor={Author},                 % author
+    pdfsubject={Subject},                   % subject of the document
+    pdfcreator={Creator},                   % creator of the document
+    pdfproducer={Producer},             % producer of the document
+    pdfkeywords={keyword1, key2, key3},   % list of keywords
+    pdfnewwindow=true,                  % links in new window
+    colorlinks=true,                        % false: boxed links; true: colored links
+    linkcolor=blue,                          % color of internal links
+    filecolor=blue,                     % color of file links
+    citecolor=blue,                     % color of file links
+    urlcolor=blue                        % color of external links
+}
+
+\begin{document}
+
+Hallo, ich $a^2+b^2=c^2$ bin eine Formel im Fließtext, in \TeX-Notation.
+
+Hallo, ich \(a^2+b^2=c^2\) bin eine Formel im Fließtext, in \LaTeX-Notation.
+
+Hallo, ich $$a^2+b^2=c^2$$ bin eine abgesetzte Formel, in \TeX-Notation, und sollte nicht mehr genutzt werden.
+
+Hallo, ich \[a^2+b^2=c^2\] bin eine abgesetzte Formel, in \LaTeX-Notation, und sollte immer genutzt werden.
+
+\begin{equation}\label{eq:gl1}% \right. wenn keine schließende große Klammer gesetzt werden soll
+-\frac{p}{2} \pm \sqrt{
+\left(\frac{p}{2}\right)
+^2 - q}
+\end{equation}
+
+Siehe Gleichung \ref{eq:gl1} auf Seite \pageref{eq:gl1}.
+
+\begin{equation}
+a^{2^3} \Rightarrow \sum_{i=1}^{\infty} i^2 = 4 \not=8 \rightarrow \prod_{i=1}^{\infty} i^2 \quad\mbox{(Siehe dort)}
+\end{equation}
+
+% Abstände im Mathemodus:
+% \,
+% \quad
+% \qquad
+
+\begin{equation}
+a \cdot b \times c = d \cdots \ddots \ldots \dots \vdots
+\end{equation}
+
+\begin{equation}
+\overbrace{a^2+b^2}^3 = \underbrace{c^2 + d^2}_4
+\end{equation}
+
+\begin{equation}
+\sin x \cdot \cos x = \tanh y \avg
+\end{equation}
+
+\begin{eqnarray}
+y &=& d \\
+y &=& c_x +d \\
+\sin x &=& \cos x \times y + \alpha - \beta
+\end{eqnarray}
+
+%besser Version aus amsmath nutzen
+\begin{eqnarray*}
+y &=& d \\
+y &=& c_x +d \\
+\sin x &=& \cos x \times y + \alpha - \beta
+\end{eqnarray*}
+
+%besser Version aus amsmath nutzen
+\[
+\begin{array}{lcr}
+y &=& d \\
+y &=& c_x +d \\
+\sin x &=& \cos x \times y + \alpha - \beta
+\end{array}
+\]
+
+
+\[
+\bordermatrix{
+   & 1 & 2 & 3 \cr
+1 & 4 & 2 & 156 \cr
+2 & 5 & 33 & 56 \cr
+3 & 6 & 2 & 88 \cr
+}
+\]
+
+\section{Beispiele aus dem amsmath-Paket}
+%\usepackage{amsmath}
+
+\begin{align}
+a &= c \cdot x \\
+a &= c \cdot \tanh z + \sum_{i=1}^{1000} t
+\end{align}
+
+\begin{align*}
+a &= c \cdot x \\
+a &= c \cdot \tanh z + \sum_{i=1}^{1000} t
+\end{align*}
+
+\begin{alignat}{3}
+a &= c \cdot x &= x\times y \leq 567 \\
+a &= c \cdot \tanh z + \alpha\omega &= \sum_{i=1}^{1000} t
+\end{alignat}
+
+%Matrix Umgebung aus AMS math
+
+\[% Version ohne Klammern
+\begin{matrix} 
+1 & 0 & 0 \\ 
+0 & 1 & 0 \\ 
+0 & 0 & 1 \\ 
+\end{matrix}
+\]
+
+\[% mit runden Klammern
+\begin{pmatrix} 
+1 & 0 & 0 \\ 
+0 & 1 & 0 \\ 
+0 & 0 & 1 \\ 
+\end{pmatrix}
+\]
+
+\[% mit eckigen Klammern
+\begin{bmatrix} 
+1 & 0 & 0 \\ 
+0 & 1 & 0 \\ 
+0 & 0 & 1 \\ 
+\end{bmatrix}
+\]
+
+\[% mit geschweiften Klammern
+\begin{Bmatrix} 
+1 & 0 & 0 \\ 
+0 & 1 & 0 \\ 
+0 & 0 & 1 \\ 
+\end{Bmatrix}
+\]
+
+\[% mit senkrechten Strichen 
+\begin{vmatrix} 
+1 & 0 & 0 \\ 
+0 & 1 & 0 \\ 
+0 & 0 & 1 \\ 
+\end{vmatrix}
+\]
+
+\[% mit doppelten senkrechten Strichen 
+\det 
+\begin{Vmatrix} 
+1 & 0 & 0 \\ 
+0 & 1 & 0 \\ 
+0 & 0 & 1 \\ 
+\end{Vmatrix}
+\text{ist eine Matrix}
+\]
+
+\( \int_{i=1}^{\infty} \sin x \)
+
+%Standard-Vektorpfeil skaliert nicht mit
+\( \vec{a} \times \vec{def} \)
+
+%esvect Paket laden für \vv-Befehl
+\( \vv{a} \times \vv{def} \bigtriangleup \Omega  \)
+
+%Abstände
+
+
+\( ab \) % kein Abstand
+
+\(a\,b \)
+
+\(a\;b\)
+
+\(a\quad b\)
+
+\(a\qquad b\)
+
+\(a \cup b \cap c\)
+
+\[ a \in N \forall  \]
+
+\(  \mathbb{N} \)
+
+\end{document}
+
