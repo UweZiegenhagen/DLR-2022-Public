@@ -1,0 +1,76 @@
+%!TEX TS-program = Arara
+% arara: pdflatex: {shell: yes}
+% arara: biber
+% arara: pdflatex: {shell: yes}
+\documentclass[12pt,ngerman,parskip=half,bibtotoc]{scrreprt}
+
+
+\usepackage{babel}
+\usepackage{blindtext}
+\usepackage{graphicx}
+
+\usepackage[style=authoryear, backend=biber]{biblatex}
+\addbibresource{Literaturverzeichnis.bib}
+
+\author{Uwe Ziegenhagen}
+\title{Mein Basisdokument}
+
+\usepackage{hyperref}
+\hypersetup{
+    bookmarks=true,                     % show bookmarks bar
+    unicode=false,                      % non - Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,                        % show Acrobat’s toolbar
+    pdfmenubar=true,                        % show Acrobat’s menu
+    pdffitwindow=false,                 % window fit to page when opened
+    pdfstartview={FitH},                    % fits the width of the page to the window
+    pdftitle={My title},                        % title
+    pdfauthor={Author},                 % author
+    pdfsubject={Subject},                   % subject of the document
+    pdfcreator={Creator},                   % creator of the document
+    pdfproducer={Producer},             % producer of the document
+    pdfkeywords={keyword1, key2, key3},   % list of keywords
+    pdfnewwindow=true,                  % links in new window
+    colorlinks=true,                        % false: boxed links; true: colored links
+    linkcolor=red,                          % color of internal links
+    filecolor=cyan,                     % color of file links
+    citecolor=blue,                     % color of file links
+    urlcolor=magenta                        % color of external links
+}
+
+\newcommand{\pcite}[1]{\citeauthor{#1} (\citeyear{#1})}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\listoffigures
+
+\chapter{Einleitung}
+
+\section{Literatur}
+
+Wie in \cite{knuth:1984} beschrieben, ist \LaTeX\ cool.
+
+\parencite{knuth:1984}
+
+Knuth\footcite{knuth:1984} hat in seinem Werk bewiesen.
+
+
+In seinem Werk \citetitle{knuth:1984} hat \citeauthor{knuth:1984}, der in Stanford lebt, im Jahr \citeyear{knuth:1984} tolle Dinge beschrieben.
+
+\citetitle{Ziegenhagen2022} von \citeauthor{Ziegenhagen2022}
+
+\cite{ziegenhagen:2017}
+
+\pcite{ziegenhagen:2017}
+
+\cite{eckstein2022causality}
+
+\blindtext[2]
+
+\blindtext[2]
+
+\printbibliography
+
+
+\end{document}
