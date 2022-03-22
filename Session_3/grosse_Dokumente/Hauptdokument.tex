@@ -1,11 +1,25 @@
+%!TEX TS-program = Arara
+% arara: pdflatex: {shell: yes}
+% arara: biber
+% arara: pdflatex: {shell: yes}
 \documentclass[12pt, ngerman, parskip=half]{scrreprt}
 
 \input{preamble}
 
+\usepackage[style=authoryear, backend=biber]{biblatex}
+\addbibresource{Literaturverzeichnis.bib}
+
+\usepackage{uni-titlepage}
 \author{Uwe Ziegenhagen}
 \title{Dissertation}
+\date{22.03.2022}
+\place{Köln}
+\advisor{Daniel Düsentrieb}
+
+\TitlePageStyle{TU-DD}
 
 \begin{document}
+%\input{titelseite}
 \maketitle
 
 \listoffigures
@@ -17,6 +31,11 @@
 \include{Kapitel_01}
 
 \include{Kapitel_02}
+
+\nocite{*}
+\printbibliography[title={Bücher},type=book]
+
+\printbibliography[title={Online-Quellen},type=online]
 
 
 \end{document}
