@@ -1,10 +1,8 @@
 %!TEX TS-program = Arara
-% arara: lualatex: {shell: yes}
+% arara: pdflatex: {shell: yes}
 \documentclass[12pt,ngerman]{scrlttr2}
 \usepackage{babel}
-
-\usepackage{fontspec}
-\setmainfont{Century}
+\usepackage{blindtext}
 
 \setkomavar{fromname}{Uwe Ziegenhagen}
 \setkomavar{fromaddress}{Birnenweg 1, 85466 Kaiserslautern}
@@ -13,10 +11,20 @@
 \setkomavar{yourref}{UZI/2022-03-22/123}
 \setkomavar{yourmail}{21.03.2022}
 
+\firsthead{\textbf{Dr. Max Mustermann, Köln}}
+\firstfoot{Seite \arabic{page}}
+
+
+\setkomavar{nexthead}{dasfds}
+\setkomavar{nextfoot}{dasfds}
+
+
 \begin{document}
 \begin{letter}{Finanzamt Berlin \\ Zasterweg 1 \\ 12345 Berlin}
 
 \opening{Sehr geehrte Damen und Herren,}
+
+\blindtext[3]
 
 \closing{Mit freundlichen Grüßen,}
 \encl{Meine Steuererklärung 2022}
