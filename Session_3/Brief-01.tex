@@ -1,0 +1,23 @@
+%!TEX TS-program = Arara
+% arara: pdflatex: {shell: yes}
+\documentclass[12pt,ngerman]{scrlttr2}
+\usepackage{babel}
+
+\setkomavar{fromname}{Uwe Ziegenhagen}
+\setkomavar{fromaddress}{Birnenweg 1, 85466 Kaiserslautern}
+\setkomavar{subject}{Überweisung meiner Steuern}
+\setkomavar{myref}[Steuernummer]{123-456-789}
+\setkomavar{yourref}{UZI/2022-03-22/123}
+\setkomavar{yourmail}{21.03.2022}
+
+\begin{document}
+\begin{letter}{Finanzamt Berlin \\ Zasterweg 1 \\ 12345 Berlin}
+
+\opening{Sehr geehrte Damen und Herren,}
+
+
+\closing{Mit freundlichen Grüßen,}
+\encl{Meine Steuererklärung 2022}
+
+\end{letter}
+\end{document}
