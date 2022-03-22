@@ -2,37 +2,47 @@
 % arara: pdflatex: {shell: yes}
 % arara: biber
 % arara: pdflatex: {shell: yes}
-\documentclass[12pt, ngerman, parskip=half]{scrreprt}
+
+\documentclass[12pt, ngerman, parskip=half, oneside,liststotoc,bibtotoc,BCOR=1cm]{scrbook}
 
 \input{preamble}
 
-\usepackage[style=authoryear, backend=biber]{biblatex}
-\addbibresource{Literaturverzeichnis.bib}
+%\usepackage[usefilenames,DefaultFeatures={Ligatures=Common}]{plex-otf} %
 
-\usepackage{uni-titlepage}
-\author{Uwe Ziegenhagen}
-\title{Dissertation}
-\date{22.03.2022}
-\place{Köln}
-\advisor{Daniel Düsentrieb}
+%\usepackage[urw-garamond]{mathdesign}
+\usepackage{fourier}
+\setkomafont{disposition}{\normalcolor\bfseries}
 
-\TitlePageStyle{TU-DD}
+% Wie separate Schriftart für Überschriften?
+
+%\usepackage[scaled]{berasans}
+%\renewcommand{\familydefault}{\sfdefault} 
 
 \begin{document}
 %\input{titelseite}
 \maketitle
 
+\frontmatter
+
+\tableofcontents
+
 \listoffigures
 
 \listoftables
 
-\tableofcontents
+
+
+\mainmatter
+
+\(a^2 + b^2 = c^2 \)
 
 \include{Kapitel_01}
 
 \include{Kapitel_02}
 
-\nocite{*}
+\backmatter
+
+
 \printbibliography[title={Bücher},type=book]
 
 \printbibliography[title={Online-Quellen},type=online]
