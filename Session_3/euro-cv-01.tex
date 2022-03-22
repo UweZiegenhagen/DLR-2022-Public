@@ -5,9 +5,13 @@
 \ecvaddress{Entenweg 1, 12354 Entenhausen}
 \ecvtelephone{+49(0)178\,245\,863}
 
+\usepackage{eso-pic}
+
 \usepackage{ifthen}
 \newboolean{grades}
 \setboolean{grades}{false} 
+
+\AddToShipoutPicture*{\put(400,600){\includegraphics[height=3.5cm]{Katze}}}
 
 \begin{document}
 
