@@ -1,0 +1,26 @@
+\documentclass[12pt,ngerman,parskip=half]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{paralist}
+\usepackage{xcolor}
+
+\usepackage{listings}
+
+\begin{document}
+
+\begin{lstlisting}[language={Python},morekeywords={read_csv}]
+print('hello World')
+import pandas as pd
+pd.read_csv('helloWorld.csv')
+\end{lstlisting}
+
+Der \lstinline[language={Python}]{print} Befehl dient zur Ausgabe auf die Kommandozeile
+
+\lstinputlisting[language={Python},linerange={5-10},morekeywords={copyfile}, basicstyle={\ttfamily\footnotesize}]{python-beispiel.py}
+
+\end{document}
