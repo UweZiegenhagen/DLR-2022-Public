@@ -1,3 +1,4 @@
+%!TEX TS-program = Arara
 %!TeX root=Hauptdokument.tex
 \usepackage[T1]{fontenc}
 \usepackage{booktabs}
@@ -7,15 +8,15 @@
 \usepackage{paralist}
 \usepackage{xcolor}
 
-\usepackage[]{prettyref}
+\usepackage{prettyref}
 % for prettyref
 \newrefformat{cha}{Kapitel \ref{#1}}
 \newrefformat{sec}{Abschnitt \ref{#1}}
 \newrefformat{tab}{Tabelle \ref{#1} auf Seite \pageref{#1}}
-\newrefformat{fig}{Abbildung \ref{#1} auf Seite \pageref{#1}}
+\newrefformat{fig}{Bild \ref{#1} auf Seite \pageref{#1}}
 
 
-\usepackage[style=authoryear, backend=biber]{biblatex}
+\usepackage[style=authoryear-icomp, backend=biber,natbib]{biblatex}
 \addbibresource{Literaturverzeichnis.bib}
 
 \usepackage{blindtext}

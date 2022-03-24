@@ -2,10 +2,29 @@
 % arara: pdflatex: {shell: yes}
 % arara: biber
 % arara: pdflatex: {shell: yes}
-\documentclass[12pt,ngerman,oneside,DIV=10,
-BCOR=1cm,bibliography=totoc]{scrbook}
+\documentclass[12pt,ngerman,DIV=10,
+BCOR=1cm,bibliography=totoc,listof=totoc]{scrbook}
 \renewcommand*\chapterheadstartvskip{\vspace*{-\topskip}}
 \input{preamble}
+
+
+\usepackage[headsepline=0.5pt,footsepline=0.5pt]{scrlayer-scrpage}
+\KOMAoptions{headwidth=1.1\textwidth,footwidth=1.1\textwidth}
+\pagestyle{scrheadings}
+ 
+\ohead[\headmark]{\headmark}
+\ofoot[\pagemark]{\pagemark}
+\ifoot[]{\today} % inner foot
+\ihead[]{} % inner head
+\cfoot[]{} % center foot
+\chead[]{} % center head
+
+\newcommand{\pcite}[1]{\citeauthor{#1} (\citeyear{#1})}
+
+\usepackage{chemformula}
+\usepackage{mhchem}
+\usepackage{siunitx}
+
 
 \begin{document}
 \frontmatter
@@ -19,9 +38,26 @@ BCOR=1cm,bibliography=totoc]{scrbook}
 \listoftables
 
 \chapter*{Notation}
+\addchap{Notation}
+%\addcontentsline{toc}{chapter}{Notation}
 
 \mainmatter
 \include{Einleitung}
+
+\ch{CO2}
+
+\prettyref{fig:katze}
+
+\SI{123}{\celsius}
+
+
+
+\citep{knuth:1984}
+
+\clearpage
+
+\citet{knuth:1984}
+
 
 \include{Grundlagen}
 
