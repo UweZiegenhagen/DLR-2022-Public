@@ -1,0 +1,69 @@
+%!TeX root=Hauptdokument.tex
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{paralist}
+\usepackage{xcolor}
+
+\usepackage[]{prettyref}
+% for prettyref
+\newrefformat{cha}{Kapitel \ref{#1}}
+\newrefformat{sec}{Abschnitt \ref{#1}}
+\newrefformat{tab}{Tabelle \ref{#1} auf Seite \pageref{#1}}
+\newrefformat{fig}{Abbildung \ref{#1} auf Seite \pageref{#1}}
+
+
+\usepackage[style=authoryear, backend=biber]{biblatex}
+\addbibresource{Literaturverzeichnis.bib}
+
+\usepackage{blindtext}
+
+\usepackage{subcaption}
+
+\usepackage{uni-titlepage}
+
+\author{Zefram Cochrane}
+\title{Reisen in Überlichtgeschwindigkeit}
+\date{\today}
+\place{Köln}
+\extratitle{extratitle} % Schmutztitel
+\frontispiece{frontispiece} % Bildertitel, https://de.wikipedia.org/wiki/Frontispiz#/media/Datei:Cl%C3%BCver-introductio-1686-1.jpg
+\titlehead{Deutsches Zentrum für Luft- und Raumfahrt}
+\uppertitleback{uppertitleback}
+\lowertitleback{lowertitleback}
+\dedication{dedication}
+\faculty{Fakultät für Quantenreisen}
+\chair{Prof. Dr. Daniel Düsentrieb}
+\professor{professor}
+\duration{2080--2095}
+\referee{Dagobert Duck}
+\subject{Dissertation}
+%\student{student}
+\discipline{discipline}
+\matriculationnumber{matriculationnumber}
+\advisor{Prof. Dr. Daniel Düsentrieb}
+\TitlePageStyle{KIT}
+
+\usepackage{hyperref}
+\hypersetup{
+    bookmarks=true,                     % show bookmarks bar
+    unicode=false,                      % non - Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,                        % show Acrobat’s toolbar
+    pdfmenubar=true,                        % show Acrobat’s menu
+    pdffitwindow=false,                 % window fit to page when opened
+    pdfstartview={FitH},                    % fits the width of the page to the window
+    pdftitle={My title},                        % title
+    pdfauthor={Author},                 % author
+    pdfsubject={Subject},                   % subject of the document
+    pdfcreator={Creator},                   % creator of the document
+    pdfproducer={Producer},             % producer of the document
+    pdfkeywords={keyword1, key2, key3},   % list of keywords
+    pdfnewwindow=true,                  % links in new window
+    colorlinks=true,                        % false: boxed links; true: colored links
+    linkcolor=red,                          % color of internal links
+    filecolor=cyan,                     % color of file links
+    citecolor=green,                     % color of file links
+    urlcolor=magenta                        % color of external links
+}

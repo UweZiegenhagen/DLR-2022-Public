@@ -1,0 +1,31 @@
+%!TEX TS-program = Arara
+% arara: pdflatex: {shell: yes}
+% arara: biber
+% arara: pdflatex: {shell: yes}
+\documentclass[12pt,ngerman,oneside,DIV=10,
+BCOR=1cm,bibliography=totoc]{scrbook}
+\renewcommand*\chapterheadstartvskip{\vspace*{-\topskip}}
+\input{preamble}
+
+\begin{document}
+\frontmatter
+\maketitle
+
+
+\tableofcontents
+
+\listoffigures 
+
+\listoftables
+
+\chapter*{Notation}
+
+\mainmatter
+\include{Einleitung}
+
+\include{Grundlagen}
+
+\backmatter
+\printbibliography
+
+\end{document}
