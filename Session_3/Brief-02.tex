@@ -13,11 +13,10 @@
 
 \pagestyle{myheadings}
 
-\firsthead{\textbf{Dr. Max Mustermann, Köln}}
+\firsthead{\textbf{Dr. \usekomavar{fromname}, Köln}}
 \firstfoot{Seite \arabic{page}}
 
-
-\setkomavar{nexthead}{dasfds}
+\setkomavar{nexthead}{\usekomavar{fromname}\hfill \today}
 \setkomavar{nextfoot}{dasfds}
 
 
